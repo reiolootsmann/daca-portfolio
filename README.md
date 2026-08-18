@@ -1,43 +1,34 @@
-# DACA Portfolio
+# \# DACA Portfolio
 
-**Participant:** \[Reio Lootsmann]
-**Programme:** Data Analyst Career Accelerator (DACA)
+# \*\*Participant:\*\* Reio Lootsmann
 
-## About this portfolio
+# \*\*Programme:\*\* Data Analyst Career Accelerator (DACA)
 
-This repository documents my learning projects and evidence.
+# 
 
-© Ettevõtluskeskus OÜ | DACA — page 2
-v1.1.1 | 2026-08-12
+# \## About this portfolio
 
-## Projects
+# This repository documents my learning projects and evidence.
 
-* Week 0: Onboarding
-* Week 1: SQL fundamentals
+# 
 
-## Skills in progress
+# I am documenting my progress week by week.
 
-* SQL and PostgreSQL
-* Git and GitHub
-* Visualisation and Python
+# 
 
+# \## Projects
 
+# \- Week 0: Onboarding
 
-I am documenting my progress week by week
+# \- Week 1: SQL fundamentals
 
-## Projects
+# 
 
-\- Week 0: Onboarding
+# \## Skills in progress
 
-\- Week 1: SQL fundamentals
+# \- SQL and PostgreSQL
 
+# \- Git and GitHub
 
-
-\## Skills in progress
-
-\- SQL and PostgreSQL
-
-\- Git and GitHub
-
-\- Visualisation and Python
+# \- Visualisation and Python
 
