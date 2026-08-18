@@ -25,3 +25,19 @@ v1.1.1 | 2026-08-12
 
 I am documenting my progress week by week
 
+## Projects
+
+\- Week 0: Onboarding
+
+\- Week 1: SQL fundamentals
+
+
+
+\## Skills in progress
+
+\- SQL and PostgreSQL
+
+\- Git and GitHub
+
+\- Visualisation and Python
+
