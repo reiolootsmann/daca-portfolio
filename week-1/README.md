@@ -35,6 +35,19 @@ and stated limitation as comments in the file:
 
 No `UPDATE` or `DELETE` statements were run against any table.
 
+### Session 2 — additional queries from the group meeting
+
+During Session 2, the meeting lead ran through basic queries against
+`sales` live in Supabase. I couldn't note down all of hers in time, so
+I wrote three of my own afterward, covering the same territory —
+reading the table and sizing up the duplicate-row issue:
+
+| File | Question | Result |
+|---|---|---|
+| `session2_01_rows_and_unique_customers.sql` | How many sales rows are there, and how many distinct customers do they represent? | 15,234 rows, 2,558 distinct `customer_id` values |
+| `session2_02_unique_products_sold.sql` | How many of the 362 catalogue products actually appear in `sales`? | 350 distinct `product_id` values (about 12 products never sold) |
+| `session2_03_rows_vs_unique_sale_id.sql` | Does the row-count-vs-distinct-ID gap from `week1_02` show up with a simpler, single-field version of the same check? | Same result: 15,234 rows vs 10,118 distinct `sale_id` |
+
 ## 3. What did I learn or recommend next?
 
 Toomas's estimate of "over five thousand" repeated-looking sales
@@ -61,4 +74,11 @@ existing under more than one customer record — checking that needs a
 join across tables, which is outside the Week 1 skill boundary and is
 now a flagged question for a later week.
 
-**Team's shared work:** Session 2 (group work) hasn't happened yet — link to follow.
+Session 2 added two more useful baseline numbers: sales only
+represent 2,558 distinct customers (out of 3,150 in the customers
+table) and 350 distinct products (out of 362 in the catalogue) — both
+worth keeping in mind before making any "per customer" or "per
+product" claim later.
+
+**Team's shared work:** Session 2 (group work) happened; link to the
+team's shared repository/board to follow.
