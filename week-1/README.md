@@ -15,6 +15,12 @@ So the Week 1 question was: using only the three released tables
 `WHERE`, `COUNT`, `DISTINCT`, `ORDER BY`, `LIMIT` — no joins yet), how
 bad is it, really?
 
+Later, during the group session, Toomas raised the same worry about
+every table, not just `sales`: "I don't trust this data yet... I want
+a separate report on EVERY table." The team split the tables up by
+role; my assignment (Role B / Task Card B) was to investigate
+`customers`.
+
 ## 2. What did I do, and what evidence can a reader inspect?
 
 First, I loaded and verified the three tables (see
@@ -48,6 +54,25 @@ reading the table and sizing up the duplicate-row issue:
 | `session2_02_unique_products_sold.sql` | How many of the 362 catalogue products actually appear in `sales`? | 350 distinct `product_id` values (about 12 products never sold) |
 | `session2_03_rows_vs_unique_sale_id.sql` | Does the row-count-vs-distinct-ID gap from `week1_02` show up with a simpler, single-field version of the same check? | Same result: 15,234 rows vs 10,118 distinct `sale_id` |
 
+### Task Card B (group meeting) — Customer data
+
+For Toomas's "a separate report on every table" challenge, my role
+was to investigate `customers`. Screenshots for these six queries are
+in `Customer data evidence/` (a separate folder from
+`setup-evidence/`, created during the live session).
+
+| File | Question | Result |
+|---|---|---|
+| `week1_05_customer_count.sql` | How many customers are there in total? | 3,150 customers |
+| `week1_06_customer_table_sample.sql` | What columns and data does the table actually contain? | `customer_id`, `first_name`, `last_name`, `email`, `phone`, `city`, `registration_date`, `loyalty_tier`, `birth_year` |
+| `week1_07_customer_cities_by_count.sql` | Which cities are customers from, and how many per city? | 54 distinct raw `city` values for roughly a dozen real cities; Tallinn alone is split across at least 4 spellings ("Tallinn" 1,135, "Tallinn " 31, "tallinn" 26, " Tallinn" 23) |
+| `week1_08_tallinn_customers.sql` | Sample of customers from one city, sorted by name | Exact-match `city = 'Tallinn'` rows only — undercounts the real Tallinn total for the reason above |
+| `week1_09_customer_registration_range.sql` | When did the first and most recent customers register? | Earliest 2020-01-02, latest 2025-02-27 |
+| `week1_10_customer_missing_values.sql` | Are any customers missing a first name or an email? | 0 missing first names; 380 missing emails (about 12%) |
+
+No `UPDATE` or `DELETE` statements were run against `customers`
+either.
+
 ## 3. What did I learn or recommend next?
 
 Toomas's estimate of "over five thousand" repeated-looking sales
@@ -80,5 +105,24 @@ table) and 350 distinct products (out of 362 in the catalogue) — both
 worth keeping in mind before making any "per customer" or "per
 product" claim later.
 
-**Team's shared work:** Session 2 (group work) happened; link to the
-team's shared repository/board to follow.
+There are 3,150 customers in the table, spread across roughly a dozen
+real cities — though you can't read that off `GROUP BY city` directly,
+because of the spelling issue below. The most surprising finding was
+how messy `city` is: 54 different raw values came back where there
+should only be about 12, purely from inconsistent casing and stray
+leading/trailing spaces. That's not a rare edge case — Tallinn alone,
+the most common city, is fragmented across at least 4 spellings. Any
+report or filter that groups customers by city as it's currently
+stored will undercount, not fail outright, which is arguably worse
+because it looks correct at a glance. Missing data was minimal on the
+name side (0 missing first names) but real on the contact side (380
+customers, about 12%, have no email on file) — worth flagging if
+email is meant to be a required field. None of this was changed in
+the database; standardising `city` and deciding what to do about
+missing emails are both cleanup questions for a later week, not this
+one.
+
+**Team's shared work:** Session 2 (group work) happened, and the
+group's "report on every table" challenge is in progress — this file
+covers my Role B (`customers`) contribution; link to the team's
+shared repository/board to follow.
