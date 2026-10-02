@@ -15,7 +15,7 @@ what that means for the business.
 
 Dashboard file: `Dashboard/urbanstyle_week6_dashboard_reio.pbix` (page:
 "TASK CARD — ROLE C: Pärnu Store Story", built on top of my Week 5/6 file).
-Screenshot: `week-6-evidence/`.
+Screenshot: `week_6_evidence/urbanstyle_week6_dashboard_reio_pärnu.png`.
 
 | Visual | Question | Result |
 |---|---|---|
