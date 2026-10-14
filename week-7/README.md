@@ -38,9 +38,9 @@ scale-based), but every recency value is now a genuine, positive number.
 |---|---|---|
 | Potential Loyalists | 759 | 29.9% |
 | Loyal Customers | 679 | 26.7% |
-| At Risk | 647 | 25.5% |
+| At Risk | 529 | 20.8% |
 | VIP Champions | 455 | 17.9% |
-| Lost | 0 | 0% |
+| Lost | 118 | 4.6% |
 
 **Role D — Visualization.** Three Plotly charts: segment distribution, Recency vs
 Monetary (scatter, coloured by segment, sized by frequency), and Top 10 VIP Champions
