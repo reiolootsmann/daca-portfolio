@@ -1,34 +1,28 @@
-\# DACA Portfolio
+# DACA Portfolio
 
-\*\*Participant:\*\* Reio Lootsmann
+**Participant:** Reio Lootsmann
 
-\*\*Programme:\*\* Data Analyst Career Accelerator (DACA)
+**Programme:** Data Analyst Career Accelerator (DACA)
 
-\## About this portfolio
+## About this portfolio
 
 This repository documents my learning projects and evidence.
 
-
-
 I am documenting my progress week by week.
 
+## Projects
 
+- Week 0: Onboarding
+- Week 1: SQL fundamentals
 
-\## Projects
+## Week 9: Hiring Guide (Group Work)
 
-\- Week 0: Onboarding
+- Role: B — Technical Interviewer's view
+- Contribution: Wrote the technical interviewer's section of UrbanStyle's hiring guide — criteria for assessing code quality, tool familiarity and documentation, with green/red flags and three recommendations for management.
+- AI use: Used AI to help structure and format the section into a polished PDF; the evaluation criteria and recommendations are my own.
 
-\- Week 1: SQL fundamentals
+## Skills in progress
 
-
-
-
-
-\## Skills in progress
-
-\- SQL and PostgreSQL
-
-\- Git and GitHub
-
-\- Visualisation and Python
-
+- SQL and PostgreSQL
+- Git and GitHub
+- Visualisation and Python
